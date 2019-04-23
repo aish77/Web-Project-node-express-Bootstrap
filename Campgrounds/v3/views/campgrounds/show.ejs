@@ -1,0 +1,30 @@
+<%include header%>
+<br>
+<br>
+<br>
+
+<div class="container">
+<div class="row">
+    <div class="col-md-3">
+       <div class="list-group">
+  <a href="#" class="list-group-item toggle border border-secondary">First item</a>
+  <a href="#" class="list-group-item toggle border border-secondary">Second item</a>
+  <a href="#" class="list-group-item toggle border border-secondary">Third item</a>
+       </div>
+       </div>
+<div class="col-md-9">
+            <h2><%=campgrounds.name%></h2>
+<img src = "<%=campgrounds.image%>" >
+<h4 class="blockquote"><%=campgrounds.description%></h4>
+<h3><a href="/campgrounds/<%=campgrounds._id%>/comments/new"class="btn btn-outline-primary btn-sm">Add Comment</a></h3>
+<div class="card bg-light" style="margin:10px auto">
+    <% campgrounds.comments.forEach(function(comment){ %>
+    <p>
+<strong><%=comment.author%></strong> - <%=comment.text%>
+</p>
+<% }) %>
+</div>
+</div>
+
+</div>
+</div>

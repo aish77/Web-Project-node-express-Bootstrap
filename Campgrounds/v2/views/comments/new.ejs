@@ -1,0 +1,19 @@
+<%include ../campgrounds/header%>
+<div class="container">
+<div class="row">
+    <div style="width:50%;margin:0 auto">
+    <h1>Add Comment</h1>
+    <form action = "/campgrounds/<%=campgrounds._id%>/comments" method = "post">
+    <div class="form-group">
+        <input class="form-control" type = "text" name="comment[author]" placeholder = "name of author">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type = "text" name="comment[text]" placeholder = "comment text">
+    </div>
+
+<button class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+</div>
+</div>

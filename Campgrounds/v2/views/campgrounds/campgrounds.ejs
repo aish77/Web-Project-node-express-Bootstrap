@@ -1,0 +1,30 @@
+<% include header%>
+
+
+<div class="container">
+    <header class="jumbotron">
+
+           <h1>Campgrounds</h1>
+           <p>The best campgrounds from all over the world</p>
+
+            <a class="btn btn-primary btn-lg" href="/campgrounds/new">Create Campground</a>
+
+         </header>
+
+        <div class="row" style="display: flex; flex-wrap:wrap">
+          <% campgrounds.forEach(function(campgrounds){%>
+           <div class="col-md-4 col-sm-6 col-xs-3">
+                <div class="img-thumbnail">
+                <img src = "<%=campgrounds.image%>" style="width:100%">
+                <div class="img-caption text-center">
+               <h4><%=campgrounds.name%></h4>
+               <p>
+                   <a href="/campgrounds/<%=campgrounds._id%>"class="btn btn-primary">More Info</a>
+               </p>
+               </div>
+              </div>
+            </div>
+        <%});%>
+         </div>
+         </div>
+ <% include footer%>
